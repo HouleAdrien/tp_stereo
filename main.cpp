@@ -314,6 +314,16 @@ int main(int argc, char *argv[])
         matrice_A(i, 8) = 1;
     }
 
+      //  CImg<double> A_pseudo_inverse = matrice_A.pseudoinvert();
+
+    // Calcul de la solution des moindres carré pour f
+   /* CImg<double> F_least_squares(3, 3, 1, 1, 0);
+
+    MatMult(A_pseudo_inverse,matrice_A,F_least_squares ,3,3,1) ;
+    F_least_squares(2, 2) = 1;
+    CImg<double> U, S, V;
+    F_least_squares.SVD(U, S, V);*/
+
     matrice_A = matrice_A.transpose();
     CImg<double> U, S, V;
     matrice_A.SVD(U, S, V);
